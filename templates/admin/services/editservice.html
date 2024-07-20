@@ -1,0 +1,94 @@
+{% load static %}
+{% include 'admin/adminheader.html' %}
+<head>
+  <link rel="stylesheet" href="{% static 'plugins/select2/css/select2.min.css' %}">
+  <script src="{% static 'plugins/select2/js/select2.full.min.js' %}"></script>
+
+  <link rel="stylesheet" href="{% static 'plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css' %}">
+</head>
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Edit Services - {{service.service_name|title }}</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <a href="{% url 'service_details' %}" class="btn btn-outline-info">
+              <i class="fas fa-arrow-left"></i> Back
+            </a>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card card-outline card-info">
+            <div class="card-body">
+              <form id="editserviceform" action="{% url 'edit_service' service.id %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="row">
+                  <div class="col-md-12">
+                      <div class="form-group">
+                          <label for="name">Service Name</label>
+                          <input type="text"  class="form-control" name="service_name" value="{{service.service_name}}" required>
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="url_name">URL Name</label>
+                        <input type="text"  class="form-control" name="url_name" value="{{service.url_name}}" required>
+                    </div>
+                </div>
+            </div>
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="form-group">
+                          <label for="content">Short Content</label>
+                          <input type="text" class="form-control"  value="{{service.short_content}}" name="short_content" required>
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="form-group">
+                          <label for="content">Long Content</label>
+                          <input type="text" class="form-control"  value="{{service.long_content}}" name="long_content" required>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="form-group">
+                          <label for="image">Photo</label>
+                          <input type="file" class="form-control-file" id="image" name="image">
+                          <img src="{{ service.image.url }}" style="width: 4.5cm; height: 3.5cm; max-width: 100%; max-height: 100%;" alt="Portfolio Image" name="image">
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-12">
+                      <button type="submit" class="btn btn-primary">
+                          <i class="fas fa-save"></i> Save
+                      </button>
+                  </div>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{% include 'admin/adminfooter.html' %}

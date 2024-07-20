@@ -1,0 +1,82 @@
+{% load static %}
+{% include 'admin/adminheader.html' %}
+
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Delete Blog - {{ blog.blog_name }}</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <a href="{% url 'blog_details' %}" class="btn btn-outline-danger">
+              <i class="fas fa-arrow-left"></i> Back
+            </a>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card card-outline card-danger">
+            <div class="card-body">
+              <h3>Are you sure you want to delete blog for {{blog.blog_name}}?</h3>
+              <table class="table table-bordered table-sm">
+                <tbody>
+                  <tr>
+                    <th scope="row">Sl No</th>
+                    <td>{{ blog.id }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Photo</th>
+                  <td><img src="{{ blog.image.url }}" alt="Client Photo" style="width: 100px; height: auto;"></td>
+              </tr>  
+                    <tr>
+                        <th scope="row">Blog Name</th>
+                        <td>{{blog.Blog_name}}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">URL Name</th>
+                      <td>{{blog.url_name}}</td>
+                  </tr>
+                    <tr>
+                        <th scope="row">Manager Name</th>
+                        <td>{{blog.manager_name}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Date</th>
+                        <td>{{blog.date}}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Short Content</th>
+                      <td>{{blog.short_content}}</td>
+                  </tr>
+                    <tr>
+                        <th scope="row">Content</th>
+                        <td>{{blog.content}}</td>
+                    </tr>
+                  
+                </tbody>
+              </table>
+              <br>
+              <form id="deleteblogForm" action="{% url 'delete_blog' blog.id %}" method="POST">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">
+                  <i class="fas fa-trash"></i> Delete
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{% include 'admin/adminfooter.html' %}

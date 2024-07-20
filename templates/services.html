@@ -1,0 +1,180 @@
+{% load static %}
+{% include 'header.html' %}
+<style>
+	.service {
+		position: relative;
+		width: 100%;
+		padding: 45px 0 15px 0;
+	}
+	
+	.service .service-item {
+		position: relative;
+		width: 100%;
+		margin-bottom: 30px;
+		padding: 30px;
+		text-align: center;
+		border: 1px solid rgba(0, 0, 0, .1);
+		transition: .3s;
+	}
+	
+	.service .service-item:hover {
+		border-color: transparent;
+		box-shadow: 0 0 30px rgba(0, 0, 0, .1);
+	}
+	
+	.service .service-item img {
+		height: 250px;
+		width:250px;
+		margin-bottom: 20px;
+	}
+	
+	.service .service-item h3 {
+		margin-bottom: 10px;
+		font-size: 22px;
+		font-weight: 300;
+		letter-spacing: 1px;
+	}
+	
+	.service .service-item p {
+		margin-bottom: 10px;
+		font-size: 16px;
+	}
+	
+	.service .service-item a {
+		position: relative;
+		font-size: 16px;
+		color: #0796fe;
+		transition: .3s;
+	}
+	
+	.service .service-item a::after {
+		position: absolute;
+		width: 80%;
+		height: 2px;
+		bottom: -3px;
+		left: 10%;
+		background: #0796fe;
+	}
+	
+	.service .service-item:hover a.btn {
+		color: #092a49;
+		background: #1d2434;
+		border-color: #1d2434;
+	}
+
+</style>
+			<!-- start banner Area -->
+			<section class="banner-area relative" id="home">	
+				<div class="overlay overlay-bg"></div>
+				<div class="container">				
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1 class="text-white">
+								Services				
+							</h1>	
+							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="services.html"> Services</a></p>
+						</div>	
+					</div>
+				</div>
+			</section>
+			<!-- End banner Area -->
+
+			<!-- Start service Area -->
+			<section class="service-area section-gap" id="service">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-md-12 pb-50 header-text text-center">
+							<h1 class="mb-10">Our Services</h1>
+							<p>
+								What we offer to our clients
+							</p>
+						</div>
+					</div>						
+					<!-- Service Start -->
+					<div class="service mt-125">
+						<div class="container">
+							<!-- <div class="section-header">
+								<p>Consulting Services</p>
+								<h2>Our Best Consulting Services</h2>
+							</div> -->
+							<div class="row">
+								<div class="col-lg-4 col-md-6">
+									<div class="service-item">
+										<img src="{% static 'img/k1.jpg' %}" class="icon" alt="Icon">
+										<h3>Modular Kitchen</h3>
+										<p>
+											We design and install modular kitchens that are tailored to your specific needs and preferences. Our team of experts will work with you to create a kitchen that is both functional and aesthetically pleasing.
+										</p>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6">
+									<div class="service-item">
+										<img src="{% static 'img/k2.jpg' %}" class="icon" alt="Icon">
+										<h3>Office Interiors</h3>
+										<p>
+											Our office interior design services are designed to create a productive and comfortable work environment. We'll work with you to understand your business needs and create a space that reflects your brand and values.
+										</p>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6">
+									<div class="service-item">
+										<img src="{% static 'img/k3.jpeg' %}" class="icon" alt="Icon">
+										<h3>Wardrobes</h3>
+										<p>
+											We design and install custom wardrobes that are tailored to your specificneeds and preferences. Our team of experts will work with you to create a wardrobe that is both functional and aesthetically pleasing.
+										</p>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6">
+									<div class="service-item">
+										<img src="{% static 'img/k4.jpg' %}" class="icon" alt="Icon">
+										<h3>Loft Coverings</h3>
+										<p>
+											Our loft covering services are designed to create a functional and comfortable living space in your attic. We'll work with you to understand your needs and create a space that is both practical and aesthetically pleasing.
+										</p>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6">
+									<div class="service-item">
+										<img src="{% static 'img/k5.jpeg' %}" class="icon" alt="Icon">
+										<h3>Wall Panels</h3>
+										<p>
+											We design and install custom wall panels that are tailored to your specific needs and preferences. Our team of experts will work with you to create a wall panel that is both functional and aesthetically pleasing.
+										</p>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6">
+									<div class="service-item">
+										<img src="{% static 'img/k6.jpeg' %}" class="icon" alt="Icon">
+										<h3>Bedroom Interiors</h3>
+										<p>
+											Our bedroom interior design services are designed to create a comfortable and relaxing space that reflects your personal style. We'll work with you to understand your needs and create a space that is both functional and aesthetically pleasing.
+										</p>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6">
+									<div class="service-item">
+										<img src="{% static 'img/k7.jpeg' %}" class="icon" alt="Icon">
+										<h3>Digital Bathroom Doors</h3>
+										<p>
+											Our digital bathroom door services are designed to create a functional and stylish space that is easy to maintain. We'll work with you to understand your needs and create a bathroom door that is both practical and aesthetically pleasing.
+										</p>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6">
+									<div class="service-item">
+										<img src="{% static 'img/k8.jpeg' %}" class="icon" alt="Icon">
+										<h3>Childrens Bedroom Interiors</h3>
+										<p>
+											Our children's bedroom interior design services are designed to create a fun and safe space that reflects your child's personality. We'llwork with you to understand your child's needs and create a space that is both functional and aesthetically pleasing.
+										</p>
+									</div>
+								</div>
+							</div>
+							<a href="https://api.whatsapp.com/send?phone=918015057532&text=Hi,%20I%20would%20like%20to%20enquire%20about%20your%20new%20designs." target="_blank" class="primary-btn text-uppercase">Enquire Now</a>			
+						</div>
+					</div>
+					<!-- Service End -->	
+				</div>	
+			</section>															
+{% include 'footer.html' %}

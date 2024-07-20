@@ -1,0 +1,316 @@
+{% load static %}
+{% include 'header.html' %}
+			<!-- start banner Area -->
+			<section class="banner-area relative" id="home">
+				<div class="overlay overlay-bg"></div>
+				<div class="container">
+					<div class="row fullscreen d-flex justify-content-center align-items-center">
+						<div class="banner-content col-lg-9 col-md-12 justify-content-center ">
+							<h1>
+								Transforming Spaces,<br> Inspiring Lives.		
+							</h1>
+							{% comment %} <p class="text-white mx-auto">
+								If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $.17 each. You may be saying to yourself.
+							</p> {% endcomment %}
+							<a href="{% url 'about'%}" class="primary-btn header-btn text-uppercase mt-10">Get Started</a>
+						</div>											
+					</div>
+				</div>
+			</section>
+			<!-- End banner Area -->
+			
+			<!-- Start service Area -->
+			<section class="service-area section-gap" id="service">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-md-12 pb-50 header-text text-center">
+							<h1 class="mb-10">Why Choose Us</h1>
+							{% comment %} <p>
+								Who are in extremely love with eco friendly system..
+							</p> {% endcomment %}
+						</div>
+					</div>						
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="single-service">
+								<a href="#"><h4>Quality Materials and Resources</h4></a>
+								<p>
+									We have access to a wide range of high-quality materials, furnishings, and decor items. We source products from trusted suppliers to ensure durability, sustainability, and aesthetic appeal.
+								</p>
+							</div>
+						</div>	
+						<div class="col-lg-4">
+							<div class="single-service">
+								<a href="#"><h4>Client Satisfaction</h4></a>
+								<p>
+									We prioritize your satisfaction from consultation to installation, focusing on clear communication, attention to detail, and exceptional service to create spaces you'll love for years.
+								</p>
+							</div>
+						</div>	
+						<div class="col-lg-4">
+							<div class="single-service">
+								<a href="#"><h4>Tailored Approach</h4></a>
+								<p>
+									We tailor our approach to understand your unique preferences, lifestyle, and requirements, ensuring the final design exceeds expectations, reflects your personality, and enhances your space's functionality.
+								</p>
+							</div>
+						</div>																													
+					</div>
+				</div>	
+			</section>
+			<!-- End service Area -->
+
+			<!-- Start gallery Area -->
+			<section class="gallery-area pb-120">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="col-md-12 pb-40 header-text text-center">
+							<h1 class="pb-10">Our Recent Works may impress you</h1>
+							{% comment %} <p>
+								Who are in extremely love with eco friendly system.
+							</p> {% endcomment %}
+						</div>
+					</div>							
+					<div class="row">
+						<div class="col-lg-8">
+							<div class="single-gallery">
+								<div class="content">
+								    <a href="#" target="_blank">
+								      <div class="content-overlay"></div>
+								  		 <img class="content-image img-fluid d-block mx-auto" src="{% static 'img/g1.jpg' %}" alt="">
+								      <div class="content-details fadeIn-bottom">
+								        <h3 class="content-title mx-auto">Wall Panels</h3>
+								        {% comment %} <a href="project-details.html" class="primary-btn text-uppercase mt-20">More Details</a> {% endcomment %}
+								      </div>
+								    </a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="single-gallery">
+								<div class="content">
+								    <a href="#" target="_blank">
+								      <div class="content-overlay"></div>
+								  		 <img class="content-image img-fluid d-block mx-auto" src="{% static 'img/g2.jpg' %}" alt="">
+								      <div class="content-details fadeIn-bottom">
+								        <h3 class="content-title mx-auto">Wardrobes</h3>
+								        {% comment %} <a href="project-details.html" class="primary-btn text-uppercase mt-20">More Details</a> {% endcomment %}
+								      </div>
+								    </a>
+								</div>
+							</div>
+						</div>	
+						<div class="col-lg-4">
+							<div class="single-gallery">
+								<div class="content">
+								    <a href="#" target="_blank">
+								      <div class="content-overlay"></div>
+								  		 <img class="content-image img-fluid d-block mx-auto" src="{% static 'img/g3.jpg' %}" alt="">
+								      <div class="content-details fadeIn-bottom">
+								        <h3 class="content-title mx-auto">Wardrobes</h3>
+								        {% comment %} <a href="project-details.html" class="primary-btn text-uppercase mt-20">More Details</a> {% endcomment %}
+								      </div>
+								    </a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-8">
+							<div class="single-gallery">
+								<div class="content">
+								    <a href="#" target="_blank">
+								      <div class="content-overlay"></div>
+								  		 <img class="content-image img-fluid d-block mx-auto" src="{% static 'img/g4.jpg' %}" alt="">
+								      <div class="content-details fadeIn-bottom">
+								        <h3 class="content-title mx-auto">Modular Kitchen</h3>
+								        {% comment %} <a href="project-details.html" class="primary-btn text-uppercase mt-20">More Details</a> {% endcomment %}
+								      </div>
+								    </a>
+								</div>
+							</div>
+						</div>												
+					</div>
+				</div>	
+			</section>
+			<!-- End gallery Area -->
+				
+	<!-- Start Feature Area -->
+<section class="feature-area section-gap">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-12 pb-40 header-text text-center">
+                <h1 class="pb-10 text-white">Discover What Sets Us Apart</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="single-feature text-center">
+                    <a href="#" class="title d-flex align-items-center">
+                        <span class="lnr lnr-drop"></span>
+                        <h4 class="ml-3">Waterproof</h4>
+                    </a>
+                    <p class="text-center">Perfect for any weather condition, ensuring durability and reliability.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-feature text-center">
+                    <a href="#" class="title d-flex align-items-center">
+                        <span class="lnr lnr-shield-check"></span>
+                        <h4 class="ml-3">Rustproof</h4>
+                    </a>
+                    <p class="text-center">Resistant to rust, making it ideal for long-term use without corrosion concerns.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-feature text-center">
+                    <a href="#" class="title d-flex align-items-center">
+                        <span class="lnr lnr-screen"></span>
+                        <h4 class="ml-3">Remote Access</h4>
+                    </a>
+                    <p class="text-center">Easily accessible and controllable from anywhere via remote technology.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-feature text-center">
+                    <a href="#" class="title d-flex align-items-center">
+                        <span class="lnr lnr-chart-bars"></span>
+                        <h4 class="ml-3">Cost-Effective</h4>
+                    </a>
+                    <p class="text-center">High-quality at an affordable price, making it accessible to all budgets.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-feature text-center">
+                    <a href="#" class="title d-flex align-items-center">
+                        <span class="lnr lnr-apartment"></span>
+                        <h4 class="ml-3">20-Year Warranty</h4>
+                    </a>
+                    <p class="text-center">Backed by a 20-year warranty, ensuring peace of mind and confidence in longevity.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-feature text-center">
+                    <a href="#" class="title d-flex align-items-center">
+                        <span class="lnr lnr-thumbs-up"></span>
+                        <h4 class="ml-3">5-Year Guarantee</h4>
+                    </a>
+                    <p class="text-center">Comes with a 5-year guarantee, providing assurance of product reliability and support.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Feature Area -->
+
+{% comment %} 		
+		    <!-- Start testimonial Area -->
+		    <section class="testimonial-area pt-120">
+		        <div class="container">
+		            <div class="row d-flex justify-content-center">
+		                <div class="menu-content pb-70 col-lg-8">
+		                    <div class="title text-center">
+		                        <h1 class="mb-10">Testimonial from our Clients</h1>
+		                        <p>Who are in extremely love with eco friendly system.</p>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="row">
+		                <div class="active-testimonial-carusel">
+		                    <div class="single-testimonial item d-flex flex-row">
+		                        <div class="thumb">
+		                            <img class="img-fluid" src="{% static 'img/elements/user1.png' %}" alt="">
+		                        </div>
+		                        <div class="desc">
+		                            <p>
+		                                Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware.
+		                            </p>
+		                            <h4 mt-30>Mark Alviro Wiens</h4>
+									<div class="star">
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star"></span>								
+									</div>			                            
+		                        </div>
+		                    </div>
+		                    <div class="single-testimonial item d-flex flex-row">
+		                        <div class="thumb">
+		                            <img class="img-fluid" src="{% static 'img/elements/user2.png' %}" alt="">
+		                        </div>
+		                        <div class="desc">
+		                            <p>
+		                                Hypnosis quit smoking methods maintain caused quite world over the last two decades. There is a lot of argument pertaining to
+		                            </p>
+		                            <h4 mt-30>Lina Harrington</h4>
+									<div class="star">
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>								
+									</div>			                            
+		                        </div>
+		                    </div>
+		                    <div class="single-testimonial item d-flex flex-row">
+		                        <div class="thumb">
+		                            <img class="img-fluid" src="{% static 'img/elements/user1.png' %}" alt="">
+		                        </div>
+		                        <div class="desc">
+		                            <p>
+		                                Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware.
+		                            </p>
+		                            <h4 mt-30>Mark Alviro Wiens</h4>
+									<div class="star">
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star"></span>								
+									</div>			                            
+		                        </div>
+		                    </div>
+		                    <div class="single-testimonial item d-flex flex-row">
+		                        <div class="thumb">
+		                            <img class="img-fluid" src="{% static 'img/elements/user2.png' %}" alt="">
+		                        </div>
+		                        <div class="desc">
+		                            <p>
+		                                Hypnosis quit smoking methods maintain caused quite world over the last two decades. There is a lot of argument pertaining to
+		                            </p>
+		                            <h4 mt-30>Lina Harrington</h4>
+									<div class="star">
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>								
+									</div>			                            
+		                        </div>
+		                    </div>		                    
+		                </div>
+		            </div>
+		        </div>
+		    </section>
+		    <!-- End testimonial Area -->	 {% endcomment %}
+
+			<!-- Start callto-action Area -->
+			<section class="callto-action-area pt-120">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="callto-action-wrap col-lg-12 relative section-gap">
+							<div class="content">
+								<h1>
+									Looking for a <br>
+									quality and affordable interior design?
+								</h1><br>
+								<a href="https://api.whatsapp.com/send?phone=918015057532&text=Hi,%20I%20would%20like%20to%20enquire%20about%20your%20new%20designs." target="_blank" class="primary-btn text-uppercase">Enquire Now</a>			
+							</div>							
+						</div>
+					</div>
+				</div>	
+			</section>
+			<!-- End callto-action Area -->
+								
+			
+			 <br>
+{% include 'footer.html' %}

@@ -1,0 +1,72 @@
+{% load static %}
+{% include 'admin/adminheader.html' %}
+
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Delete contact - {{contact.contact_name}}</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <a href="{% url 'contact_details' %}" class="btn btn-outline-danger">
+              <i class="fas fa-arrow-left"></i> Back
+            </a>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card card-outline card-danger">
+            <div class="card-body">
+              <h3>Are you sure you want to delete contact for {{contact.contact_name}}?</h3>
+              <table class="table table-bordered table-sm">
+                <tbody>
+                  <tr>
+                    <th scope="row">Sl No</th>
+                    <td>{{ contact.id }}</td>
+                </tr>
+                    <tr>
+                        <th scope="row">Client Name</th>
+                        <td>{{contact.contact_name}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Profession</th>
+                        <td>{{contact.email}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Subject</th>
+                        <td>{{contact.subject}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Message</th>
+                        <td>{{contact.message}}</td>
+                    </tr>
+                    
+                  
+                </tbody>
+            </table>
+              </table>
+              <br>
+              <form id="deletecontactForm" action="{% url 'delete_contact' contact.id %}" method="POST">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">
+                  <i class="fas fa-trash"></i> Delete
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{% include 'admin/adminfooter.html' %}

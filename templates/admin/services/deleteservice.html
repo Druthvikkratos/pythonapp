@@ -1,0 +1,69 @@
+{% load static %}
+{% include 'admin/adminheader.html' %}
+
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Delete Service - {{ service.service_name }}</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <a href="{% url 'service_details' %}" class="btn btn-outline-danger">
+              <i class="fas fa-arrow-left"></i> Back
+            </a>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card card-outline card-danger">
+            <div class="card-body">
+              <h3>Are you sure you want to delete Service for {{service.service_name}}?</h3>
+              <table class="table table-bordered table-sm">
+                <tbody>
+                  <tr>
+                    <th scope="row">Sl No</th>
+                    <td>{{ service.id }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Photo</th>
+                  <td><img src="{{ service.image.url }}" alt="Client Photo" style="width: 100px; height: auto;"></td>
+              </tr>  
+                    <tr>
+                        <th scope="row">Service Name</th>
+                        <td>{{service.service_name}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Short Content</th>
+                        <td>{{service.short_content}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Long Content</th>
+                        <td>{{service.long_content}}</td>
+                    </tr>                    
+                </tbody>
+              </table>
+              <br>
+              <form id="deleteportForm" action="{% url 'delete_service' service.id %}" method="POST">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">
+                  <i class="fas fa-trash"></i> Delete
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{% include 'admin/adminfooter.html' %}
